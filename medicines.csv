@@ -1,0 +1,19 @@
+id,brand,active_ingredients,strength,form,inactive_ingredients,manufacturer,pack_size,price_per_pack
+M001,Zolvexin,Zolvexol,500 mg,tablet,Filler M; Dye Q,Arden Labs,10 tablets,Rs. 42
+M002,Zolvex,Zolvexol,500 mg,tablet,Filler M; Dye R,Belmont,10 tablets,Rs. 30
+M003,Zolvexa,Zolvexol,500 mg,tablet,,Corvane,10 tablets,Rs. 25
+M004,Zolvexin,Zolvexol,250 mg,tablet,Filler M,Arden Labs,10 tablets,Rs. 24
+M005,Crocin 500,Paracetamol,500 mg,tablet,Starch; Gelatin,GlaxoSmithKline,15 tablets,Rs. 18
+M006,Dolo 650,Paracetamol,650 mg,tablet,Starch; Magnesium Stearate,Micro Labs,15 tablets,Rs. 30
+M007,Calpol 500,Paracetamol,500 mg,tablet,Starch; Povidone,GSK,15 tablets,Rs. 15
+M008,Disprin,Aspirin,325 mg,tablet,Calcium Carbonate; Maize Starch,Reckitt Benckiser,10 tablets,Rs. 12
+M009,Combiflam,Ibuprofen + Paracetamol,400 mg + 325 mg,tablet,Starch; Lactose; Dye R,Sanofi,15 tablets,Rs. 45
+M010,Flexon,Ibuprofen + Paracetamol,400 mg + 325 mg,tablet,Starch; Gelatin,Aristo,15 tablets,Rs. 38
+M011,Meftal-Spas,Dicyclomine + Mefenamic Acid,10 mg + 250 mg,tablet,Starch; Cellulose,Blue Cross,10 tablets,Rs. 50
+M012,Spasmo-Proxyvon,Dicyclomine + Mefenamic Acid,10 mg + 250 mg,tablet,Starch; Silica,Wockhardt,10 tablets,Rs. 48
+M013,Digene,Magnesium Hydroxide + Aluminium Hydroxide,250 mg + 300 mg,chewable tablet,Mannitol; Saccharin; Dye R,Abbott,15 tablets,Rs. 22
+M014,Gelusil,Magnesium Hydroxide + Aluminium Hydroxide,250 mg + 300 mg,chewable tablet,Mannitol; Sorbitol,Pfizer,15 tablets,Rs. 20
+M015,Allegra 120,Fexofenadine,120 mg,tablet,Microcrystalline Cellulose; Iron Oxide,Sanofi,10 tablets,Rs. 140
+M016,Fexo 120,Fexofenadine,120 mg,tablet,Microcrystalline Cellulose; Starch,Cipla,10 tablets,Rs. 110
+M017,Sinarest,Paracetamol + Phenylephrine + Chlorpheniramine,500 mg + 10 mg + 2 mg,tablet,Starch; Talc; Dye R,Centaur,10 tablets,Rs. 60
+M018,Wikoryl,Paracetamol + Phenylephrine + Chlorpheniramine,500 mg + 10 mg + 2 mg,tablet,Starch; Magnesium Stearate,Alembic,10 tablets,Rs. 52
