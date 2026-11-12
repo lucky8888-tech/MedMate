@@ -1,0 +1,22 @@
+{
+  "name": "SafeDose - Medicine Alternatives & Allergy Shield",
+  "short_name": "SafeDose",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#090E17",
+  "theme_color": "#0D9488",
+  "orientation": "portrait-primary",
+  "description": "Smart, safe medicine alternative suggester with 3-tier allergy checks.",
+  "icons": [
+    {
+      "src": "/static/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>SafeDose — Smart Medicine Alternatives & Allergy Shield</title>
+  <meta name="description" content="SafeDose identifies safe, affordable medicine alternatives while evaluating direct, drug-class, and inactive ingredient allergy triggers.">
+  <meta name="theme-color" content="#0D9488">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="logo-area">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="M9 12l2 2 4-4"/>
+          </svg>
+        </div>
+        <div>
+          <h1 class="logo-title">SafeDose</h1>
+          <p class="logo-subtitle">Allergy Shield & Smart Alternatives</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <span class="status-badge" id="fdaStatusBadge">
+          <span class="status-dot"></span> openFDA Live
+        </span>
+        <button id="installAppBtn" class="install-btn" style="display: none;">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Install App
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Search Card -->
+      <section class="card search-card">
+        <h2 class="card-title">Check Your Prescription</h2>
+        <p class="card-desc">Enter any medicine brand, ID, or generic name to find verified safe alternatives.</p>
+
+        <!-- Search Input Box -->
+        <div class="input-group">
+          <label for="medicineSearchInput" class="input-label">Prescribed Medicine</label>
+          <div class="search-input-wrapper">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input type="text" id="medicineSearchInput" class="text-input" placeholder="e.g., Dolo 650, Combiflam, Duoflam, Advil..." autocomplete="off">
+            <button type="button" id="clearSearchBtn" class="clear-btn" aria-label="Clear input">&times;</button>
+          </div>
+          <!-- Autocomplete Dropdown -->
+          <div id="autocompleteList" class="autocomplete-list"></div>
+        </div>
+
+        <!-- Quick Suggestions / Trending Chips -->
+        <div class="quick-chips">
+          <span class="quick-label">Popular:</span>
+          <button type="button" class="chip quick-chip" data-med="Dolo 650">Dolo 650</button>
+          <button type="button" class="chip quick-chip" data-med="Duoflam">Duoflam</button>
+          <button type="button" class="chip quick-chip" data-med="Combiflam">Combiflam</button>
+          <button type="button" class="chip quick-chip" data-med="Augmentin 625 Duo">Augmentin</button>
+          <button type="button" class="chip quick-chip" data-med="Pan 40">Pan 40</button>
+          <button type="button" class="chip quick-chip" data-med="Advil">Advil (FDA)</button>
+        </div>
+
+        <!-- Allergies Section -->
+        <div class="input-group allergy-group">
+          <label class="input-label">Patient Allergies (Optional)</label>
+          <p class="sub-label">Select common excipients/classes or type a custom allergen:</p>
+          
+          <!-- Common Allergy Chips -->
+          <div class="common-allergy-chips" id="commonAllergyChips">
+            <button type="button" class="allergy-chip" data-allergy="Dye R">Dye R</button>
+            <button type="button" class="allergy-chip" data-allergy="Gelatin">Gelatin</button>
+            <button type="button" class="allergy-chip" data-allergy="Starch">Starch</button>
+            <button type="button" class="allergy-chip" data-allergy="Lactose">Lactose</button>
+            <button type="button" class="allergy-chip" data-allergy="NSAID">NSAID</button>
+            <button type="button" class="allergy-chip" data-allergy="Penicillin Antibiotic">Penicillin</button>
+          </div>
+
+          <!-- Custom Allergy Input -->
+          <div class="custom-allergy-row">
+            <input type="text" id="customAllergyInput" class="text-input text-input-sm" placeholder="Add custom allergy (e.g., Titanium Dioxide, Aspirin)">
+            <button type="button" id="addAllergyBtn" class="btn btn-secondary">Add</button>
+          </div>
+
+          <!-- Active Selected Allergies -->
+          <div class="selected-allergies-list" id="selectedAllergiesList">
+            <!-- Dynamically populated tags -->
+          </div>
+        </div>
+
+        <!-- Do Not Substitute Toggle -->
+        <div class="toggle-wrapper">
+          <div class="toggle-info">
+            <span class="toggle-title">Prescription Marked "Do Not Substitute"</span>
+            <span class="toggle-desc">Turn on if doctor specifically required this exact brand</span>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="doNotSubstituteToggle">
+            <span class="slider round"></span>
+          </label>
+        </div>
+
+        <!-- Search Action Button -->
+        <button type="button" id="checkAlternativesBtn" class="btn btn-primary btn-block">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          Check Safe Alternatives
+        </button>
+      </section>
+
+      <!-- Scan Medicine Card -->
+      <section class="card scan-card">
+        <div class="scan-card-head">
+          <h2 class="card-title">Scan a Medicine</h2>
+          <span class="scan-badge">OCR &middot; Text-Based</span>
+        </div>
+        <p class="card-desc">Snap or upload a photo of a tablet strip or syrup bottle label. SafeDose reads the <strong>printed text</strong> to identify the medicine &mdash; never by colour or appearance.</p>
+
+        <div class="scan-dropzone" id="scanDropzone">
+          <input type="file" id="scanImageInput" accept="image/*" capture="environment" hidden>
+          <div class="scan-dropzone-content" id="scanDropzoneContent">
+            <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+              <circle cx="12" cy="13" r="4"/>
+            </svg>
+            <span class="scan-dropzone-title">Tap to take a photo</span>
+            <span class="scan-dropzone-sub">or upload an image of the label</span>
+          </div>
+          <img id="scanPreview" class="scan-preview" alt="Selected medicine photo" style="display:none;">
+        </div>
+
+        <div class="scan-actions">
+          <button type="button" id="scanRetakeBtn" class="btn btn-secondary" style="display:none;">Retake</button>
+          <button type="button" id="scanIdentifyBtn" class="btn btn-primary btn-block" disabled>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3"/></svg>
+            Scan &amp; Identify
+          </button>
+        </div>
+
+        <p class="scan-note" id="scanStatusNote" style="display:none;"></p>
+        <p class="scan-note">Identification is based on printed label text only &mdash; never by colour or appearance. SafeDose does not recommend dosage from a photo. If the text is unclear, you'll see a warning to verify with a pharmacist.</p>
+      </section>
+
+      <!-- Loading Indicator -->
+      <div id="loadingIndicator" class="loading-box" style="display: none;">
+        <div class="spinner"></div>
+        <p>Evaluating clinical safety rules & checking allergies...</p>
+      </div>
+
+      <!-- Results Section -->
+      <section id="resultsSection" class="results-section" style="display: none;">
+        <!-- Scan Summary (shown after a camera/scan) -->
+        <div id="scanSummary" class="card scan-summary-card" style="display: none;"></div>
+
+        <!-- Prescribed Medicine Summary Card -->
+        <div id="prescribedCard" class="card prescribed-card">
+          <!-- Dynamically populated -->
+        </div>
+
+        <!-- Alternatives Header -->
+        <div class="results-header">
+          <h3 id="alternativesHeaderTitle">Recommended Alternatives</h3>
+          <span id="alternativesCountBadge" class="badge badge-success">0 Found</span>
+        </div>
+
+        <!-- Alternatives Grid -->
+        <div id="alternativesContainer" class="alternatives-grid">
+          <!-- Dynamically populated cards -->
+        </div>
+
+        <!-- Excluded Candidates Collapsible Section -->
+        <div id="excludedSection" class="card excluded-card" style="display: none;">
+          <div class="accordion-header" id="excludedAccordionToggle">
+            <span class="excluded-title">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              Excluded Candidates (<span id="excludedCount">0</span>)
+            </span>
+            <span class="accordion-arrow">▼</span>
+          </div>
+          <div class="accordion-body" id="excludedAccordionBody">
+            <ul id="excludedList" class="excluded-list"></ul>
+          </div>
+        </div>
+      </section>
+      <!-- Feedback Form -->
+      <section class="card feedback-card">
+        <h2 class="card-title">Feedback</h2>
+        <p class="card-desc">Tell us how SafeDose can improve. Your message is stored securely on the server and never made public. Name and email are optional.</p>
+        <form id="feedbackForm" class="feedback-form" novalidate>
+          <div class="input-group">
+            <label for="fbCategory" class="input-label">Category</label>
+            <select id="fbCategory" class="text-input feedback-select">
+              <option value="general">General</option>
+              <option value="bug">Report a bug</option>
+              <option value="feature">Feature request</option>
+              <option value="safety">Safety concern</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="fbMessage" class="input-label">Your feedback <span class="req">*</span></label>
+            <textarea id="fbMessage" class="text-input feedback-textarea" rows="3" placeholder="Share your thoughts..." maxlength="5000" required></textarea>
+          </div>
+          <div class="feedback-row">
+            <input type="text" id="fbName" class="text-input text-input-sm" placeholder="Name (optional)">
+            <input type="email" id="fbEmail" class="text-input text-input-sm" placeholder="Email (optional)">
+          </div>
+          <button type="submit" class="btn btn-primary btn-block" id="feedbackSubmitBtn">Send Feedback</button>
+          <p id="feedbackMsg" class="feedback-msg" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <div class="footer-badges">
+        <span class="footer-tag">3-Tier Allergy Engine</span>
+        <span class="footer-tag">5 Safety Rules Enforced</span>
+        <span class="footer-tag">openFDA Live Connected</span>
+      </div>
+      <p class="disclaimer">
+        <strong>Medical Disclaimer:</strong> SafeDose is for educational and decision-support purposes only. It does not replace professional medical diagnosis, advice, or physician prescription. Always consult a licensed doctor or pharmacist before switching medications.
+      </p>
+      <p class="copyright">SafeDose &copy; 2026. Made with care.</p>
+    </footer>
+  </div>
+
+  <script src="/static/js/app.js"></script>
+  <script src="/static/js/scan.js"></script>
+  <script src="/static/js/feedback.js"></script>
+</body>
+</html>

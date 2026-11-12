@@ -1,0 +1,17 @@
+.git
+.gitignore
+__pycache__/
+*.pyc
+*.pyo
+.env
+.env.*
+feedback.json
+feedback.json.tmp
+.venv/
+venv/
+env/
+*.md
+Dockerfile
+render.yaml
+Procfile
+.dockerignore

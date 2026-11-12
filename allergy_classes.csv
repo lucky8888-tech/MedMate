@@ -2,3 +2,18 @@ ingredient,class
 zolvexol,Analgesic
 ibuprofen,NSAID
 paracetamol,Analgesic
+aspirin,NSAID
+aceclofenac,NSAID
+mefenamic acid,NSAID
+amoxicillin,Penicillin Antibiotic
+clavulanic acid,Beta-lactamase Inhibitor
+azithromycin,Macrolide Antibiotic
+pantoprazole,Proton Pump Inhibitor
+omeprazole,Proton Pump Inhibitor
+cetirizine,Antihistamine
+levocetirizine,Antihistamine
+fexofenadine,Antihistamine
+metformin,Biguanide Antidiabetic
+amlodipine,Calcium Channel Blocker
+telmisartan,Angiotensin Receptor Blocker
+dicyclomine,Antispasmodic

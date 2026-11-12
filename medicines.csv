@@ -17,3 +17,34 @@ M015,Allegra 120,Fexofenadine,120 mg,tablet,Microcrystalline Cellulose; Iron Oxi
 M016,Fexo 120,Fexofenadine,120 mg,tablet,Microcrystalline Cellulose; Starch,Cipla,10 tablets,Rs. 110
 M017,Sinarest,Paracetamol + Phenylephrine + Chlorpheniramine,500 mg + 10 mg + 2 mg,tablet,Starch; Talc; Dye R,Centaur,10 tablets,Rs. 60
 M018,Wikoryl,Paracetamol + Phenylephrine + Chlorpheniramine,500 mg + 10 mg + 2 mg,tablet,Starch; Magnesium Stearate,Alembic,10 tablets,Rs. 52
+M019,Duoflam,Ibuprofen + Paracetamol,400 mg + 325 mg,tablet,Starch; Magnesium Stearate,Cipla,15 tablets,Rs. 36
+M020,Ibugesic Plus,Ibuprofen + Paracetamol,400 mg + 325 mg,tablet,Starch; Talc,Cipla,15 tablets,Rs. 32
+M021,Crocin 650,Paracetamol,650 mg,tablet,Starch; Povidone,GlaxoSmithKline,15 tablets,Rs. 32
+M022,Calpol 650,Paracetamol,650 mg,tablet,Starch; Gelatin,GSK,15 tablets,Rs. 28
+M023,Pacimol 650,Paracetamol,650 mg,tablet,Starch; Magnesium Stearate,Ipca,15 tablets,Rs. 26
+M024,Augmentin 625 Duo,Amoxicillin + Clavulanic Acid,500 mg + 125 mg,tablet,Microcrystalline Cellulose; Magnesium Stearate,GlaxoSmithKline,10 tablets,Rs. 200
+M025,Moxikind-CV 625,Amoxicillin + Clavulanic Acid,500 mg + 125 mg,tablet,Starch; Magnesium Stearate,Mankind,10 tablets,Rs. 140
+M026,Clavam 625,Amoxicillin + Clavulanic Acid,500 mg + 125 mg,tablet,Microcrystalline Cellulose; Silica,Alkem,10 tablets,Rs. 180
+M027,Azithral 500,Azithromycin,500 mg,tablet,Starch; Talc; Titanium Dioxide,Alembic,5 tablets,Rs. 120
+M028,Azee 500,Azithromycin,500 mg,tablet,Starch; Magnesium Stearate; Titanium Dioxide,Cipla,5 tablets,Rs. 115
+M029,Zady 500,Azithromycin,500 mg,tablet,Microcrystalline Cellulose; Talc,Mankind,5 tablets,Rs. 95
+M030,Pan 40,Pantoprazole,40 mg,tablet,Calcium Carbonate; Povidone,Alkem,15 tablets,Rs. 155
+M031,Pantocid 40,Pantoprazole,40 mg,tablet,Mannitol; Sodium Carbonate,Sun Pharma,15 tablets,Rs. 160
+M032,Pantop 40,Pantoprazole,40 mg,tablet,Mannitol; Magnesium Stearate,Aristo,15 tablets,Rs. 130
+M033,Omez 20,Omeprazole,20 mg,capsule,Lactose; Mannitol,Dr. Reddy's,20 capsules,Rs. 80
+M034,Ocid 20,Omeprazole,20 mg,capsule,Lactose; Starch,Zydus,20 capsules,Rs. 65
+M035,Cetzine 10,Cetirizine,10 mg,tablet,Lactose; Titanium Dioxide,GSK,10 tablets,Rs. 22
+M036,Okacet 10,Cetirizine,10 mg,tablet,Lactose; Magnesium Stearate,Cipla,10 tablets,Rs. 18
+M037,Zyrtec 10,Cetirizine,10 mg,tablet,Lactose; Starch,Dr. Reddy's,10 tablets,Rs. 20
+M038,Levocet 5,Levocetirizine,5 mg,tablet,Microcrystalline Cellulose; Titanium Dioxide,Hetero,10 tablets,Rs. 45
+M039,Vozet 5,Levocetirizine,5 mg,tablet,Microcrystalline Cellulose; Talc,Glenmark,10 tablets,Rs. 50
+M040,Glycomet 500,Metformin,500 mg,tablet,Povidone; Magnesium Stearate,USV,20 tablets,Rs. 42
+M041,Obimet 500,Metformin,500 mg,tablet,Starch; Talc,Abbott,20 tablets,Rs. 38
+M042,Glucophage 500,Metformin,500 mg,tablet,Povidone; Magnesium Stearate,Sanofi,20 tablets,Rs. 55
+M043,Amlong 5,Amlodipine,5 mg,tablet,Microcrystalline Cellulose; Magnesium Stearate,Micro Labs,15 tablets,Rs. 45
+M044,Stamlo 5,Amlodipine,5 mg,tablet,Microcrystalline Cellulose; Talc,Dr. Reddy's,15 tablets,Rs. 50
+M045,Telma 40,Telmisartan,40 mg,tablet,Mannitol; Magnesium Stearate,Glenmark,15 tablets,Rs. 135
+M046,Telmikind 40,Telmisartan,40 mg,tablet,Mannitol; Talc,Mankind,15 tablets,Rs. 85
+M047,Zerodol-P,Aceclofenac + Paracetamol,100 mg + 325 mg,tablet,Starch; Magnesium Stearate,Ipca,10 tablets,Rs. 60
+M048,Hifenac-P,Aceclofenac + Paracetamol,100 mg + 325 mg,tablet,Starch; Talc,Intas,10 tablets,Rs. 58
+M049,Dolokind-P,Aceclofenac + Paracetamol,100 mg + 325 mg,tablet,Starch; Povidone,Mankind,10 tablets,Rs. 45

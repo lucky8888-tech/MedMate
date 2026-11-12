@@ -1,0 +1,16 @@
+# Render Blueprint for SafeDose.
+# Connect this GitHub repository on https://render.com and Render will use this file.
+# The free plan sleeps after inactivity; the first request after sleep takes a few seconds.
+services:
+  - type: web
+    name: safedose
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/scan/status
+    autoDeploy: true
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: FLASK_DEBUG
+        value: "0"

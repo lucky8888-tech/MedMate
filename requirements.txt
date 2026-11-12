@@ -1,0 +1,15 @@
+# SafeDose / MedMate dependencies
+# Install with:  pip install -r requirements.txt
+#
+# NOTE: The Camera/Scan feature also requires the Tesseract OCR engine binary
+# to be installed on the system (pip cannot install it).
+#   Windows: https://github.com/UB-Mannheim/tesseract/wiki
+#   macOS:    brew install tesseract
+#   Linux:    sudo apt-get install tesseract-ocr
+# If Tesseract is not installed, the rest of the app still works; only scanning
+# is unavailable.
+
+Flask>=2.3,<4.0
+Pillow>=9.0,<12.0
+pytesseract>=0.3.10,<0.4.0
+gunicorn>=21.2,<24.0
